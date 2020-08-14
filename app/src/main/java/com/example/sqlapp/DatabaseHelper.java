@@ -26,13 +26,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
 
-        sqLiteDatabase.execSQL("create table" + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,SURNAME TEXT,MARKS INTEGER)");
+        sqLiteDatabase.execSQL("create table "+ TABLE_NAME +"(ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,SURNAME TEXT,MARKS INTEGER)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS"+ TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
     onCreate(sqLiteDatabase);
     }
     public boolean insertData(String name,String surname,String marks){
@@ -43,11 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_4,marks);
       long result =  sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
 
-      if (result== -1)
-     return false;
-
-      else
-          return true;
+        return result != -1;
 
 
     }
