@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btnAddData = (Button) findViewById(R.id.button_Add);
         btnviewAll =(Button) findViewById(R.id.button);
         viewAll();
+        btnAddData.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -44,9 +45,8 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Data not Inserted", Toast.LENGTH_LONG).show();
 
                     }
-                };
-
-
+                }
+        );
 
     }
 
