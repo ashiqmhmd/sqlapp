@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
                         boolean isInserted = myDb.insertData(editName.getText().toString(),
                                 editSurname.getText().toString(),
                                 editMarks.getText().toString());
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                       if (res.getCount()==0){
                           //show message
                           showMessage("Error","Nothing Found");
-                          return;
+                          //return;
                       }
                       StringBuffer buffer = new StringBuffer();
                       while (res.moveToNext()){
@@ -82,4 +83,3 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 }
-abcdefgh
