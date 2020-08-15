@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         editSurname = (EditText) findViewById(R.id.editText_Surname);
         editMarks = (EditText) findViewById(R.id.editText_Marks);
         btnAddData = (Button) findViewById(R.id.button_Add);
-        btnviewAll =(Button) findViewById(R.id.button_viewAll);
+        btnviewAll =(Button) findViewById(R.id.button);
         viewAll();
                 new View.OnClickListener() {
                     @Override
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                       if (res.getCount()==0){
                           //show message
                           showMessage("Error","Nothing Found");
-                          //return;
+                          return;
                       }
                       StringBuffer buffer = new StringBuffer();
                       while (res.moveToNext()){
