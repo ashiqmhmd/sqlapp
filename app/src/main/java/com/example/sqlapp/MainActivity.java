@@ -63,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
                       }
                       StringBuffer buffer = new StringBuffer();
                       while (res.moveToNext()){
-                          buffer.append("Id :"+res.getString(0)+"\n");
-                          buffer.append("Name :"+res.getString(1)+"\n");
-                          buffer.append("Surname :"+res.getString(2)+"\n");
-                          buffer.append("Marks :"+res.getString(3)+"\n\n");
+                          buffer.append("Id :"+ res.getString(0)+"\n");
+                          buffer.append("Name :"+ res.getString(1)+"\n");
+                          buffer.append("Surname :"+ res.getString(2)+"\n");
+                          buffer.append("Marks :"+ res.getString(3)+"\n\n");
 
                       }
                       //show all Data
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(true);
         builder.setTitle(title);
-        builder.setMessage(message);
+        builder.setMessage(Message);
         builder.show();
     }
 }

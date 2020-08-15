@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">sqlapp</string>
+    <string name="add_data">Add Data</string>
+    <string name="view_all">View all</string>
+    <string name="name">NAME</string>
+    <string name="mark">MARK</string>
+    <string name="surename">SURENAME</string>
 </resources>
